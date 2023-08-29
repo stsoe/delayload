@@ -1,3 +1,15 @@
+# Demo of delayload with Visual Studio
+
+- `mep` is is the application
+- `mep` links with `vart`
+- `vart` links with `xrt`
+- `vart` delayloads `xrt`
+- `vart` calls `AddDllDirectory` during static global initialization
+- `xrt` is loaded on first calls to `xrt::run` from `vart`
+- `xrt` prints the path from where it was loaded
+
+## Build and run
+```
 % cd build
 
 % cmake ..
@@ -29,5 +41,4 @@ xrt::xrt()
 xrt::run()
 xrt::~xrt()
 vart::~vart()
-
-
+```
