@@ -14,16 +14,12 @@ public:
   XRT_EXPORT
   unsigned int
   version();
-  
+
   XRT_EXPORT
   xrt();
 
   XRT_EXPORT
   ~xrt();
-
-  XRT_EXPORT
-  void
-  run();
 };
 
 } // namespace xrt

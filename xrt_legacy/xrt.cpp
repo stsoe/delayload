@@ -30,6 +30,13 @@ static X x;
 
 namespace xrt {
 
+unsigned int
+xrt::
+version()
+{
+  return 1;
+}
+
 xrt::
 xrt()
 {
@@ -40,20 +47,6 @@ xrt::
 ~xrt()
 {
   std::cout << "xrt::~xrt()\n";
-}
-
-unsigned int
-xrt::
-version()
-{
-  return 2;
-}
-
-void
-xrt::
-run()
-{
-  std::cout << "xrt::run()\n";
 }
 
 }
