@@ -1,4 +1,4 @@
-add_library(vart SHARED vart.cpp)
+add_library(vart SHARED vart.cpp delayhook.cpp)
 target_include_directories(vart PRIVATE ${MEP_SOURCE_DIR}/xrt)
 target_link_libraries(vart PRIVATE xrt)
 target_link_options(vart PRIVATE "/delayload:xrt.dll")

@@ -3,6 +3,7 @@
 #include "xrt.h"
 #include <iostream>
 #include <windows.h>
+#include <cstdlib>
 
 namespace {
 
@@ -41,7 +42,10 @@ run()
 {
   std::cout << "vart::run()\n";
   xrt::xrt x;
-  x.run();
+
+  // The run feature is implemented in version >= 2
+  if (x.version() >= 2)
+    x.run();
 }
 
 
